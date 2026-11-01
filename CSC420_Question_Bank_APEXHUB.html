@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSC 420 — Likely Exam Questions | APEXHUB</title>
+<style>
+:root{--bg:#faf9f6;--bg2:#fff;--text:#1a1d1f;--text2:#52585e;--line:#e3e0d8;--accent:#8a4b2e;--accent2:#2e5e4e;--code:#f1efe8;--tag-src:#8a4b2e;--tag-plain:#2e5e4e;--tag-ex:#4a5b8c;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161a;--bg2:#1c1e23;--text:#e9e7e0;--text2:#a9adb3;--line:#33363d;--accent:#e0a071;--accent2:#7fc9ab;--code:#22242a;--tag-src:#e0a071;--tag-plain:#7fc9ab;--tag-ex:#9db4f5}}
+:root[data-theme="dark"]{--bg:#15161a;--bg2:#1c1e23;--text:#e9e7e0;--text2:#a9adb3;--line:#33363d;--accent:#e0a071;--accent2:#7fc9ab;--code:#22242a;--tag-src:#e0a071;--tag-plain:#7fc9ab;--tag-ex:#9db4f5}
+html{scroll-padding-top:110px;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,'Iowan Old Style',serif;line-height:1.6;overflow-x:hidden}
+header{position:-webkit-sticky;position:sticky;top:0;z-index:50;background:var(--bg2);border-bottom:1px solid var(--line);padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px}
+.hdr-row{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;max-width:980px;margin:0 auto;font-family:Arial,sans-serif}
+.brand{font-weight:800;font-size:15px;white-space:nowrap}.brand span{color:var(--accent)}
+#search{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font-size:16px;font-family:Arial,sans-serif}
+#theme-btn{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:6px;padding:8px 10px;cursor:pointer}
+nav.topics{display:-webkit-flex;display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:980px;margin:8px auto 0;font-family:Arial,sans-serif;font-size:12.5px;padding-bottom:2px}
+nav.topics a{white-space:nowrap;color:var(--text2);text-decoration:none;padding:5px 9px;border-radius:14px;border:1px solid var(--line)}
+nav.topics a:hover{color:var(--accent);border-color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:20px 16px 80px}
+h1.title{font-family:Arial,sans-serif;font-size:26px;margin:6px 0 2px}
+p.lecturer-credit{font-family:Arial,sans-serif;font-size:13.5px;font-weight:700;color:var(--accent);margin:0 0 6px}
+p.sub{font-family:Arial,sans-serif;color:var(--text2);font-size:14px;margin:0 0 14px}
+.tag{display:inline-block;font-family:Arial,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px;margin-bottom:4px}
+.tag.src{background:rgba(128,128,128,.18);color:var(--tag-src)}
+.tag.plain{background:rgba(128,128,128,.18);color:var(--tag-plain)}
+.tag.ex{background:rgba(128,128,128,.18);color:var(--tag-ex)}
+.filters{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;margin:0 0 6px;font-family:Arial,sans-serif}
+.filters button{border:1px solid var(--line);background:var(--bg);color:var(--text2);border-radius:6px;padding:7px 12px;font-size:13px;cursor:pointer}
+.filters button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+#count{font-family:Arial,sans-serif;font-size:12.5px;color:var(--text2);margin:6px 0 0}
+.topic{border-top:3px solid var(--accent);padding-top:6px;margin-top:44px}
+.topic h2{font-family:Arial,sans-serif;font-size:21px;margin:2px 0 4px}
+.topic .ref{font-family:Arial,sans-serif;font-size:12px;color:var(--text2);margin:0 0 12px}
+.likely-q{display:-webkit-flex;border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:8px;margin-bottom:10px;background:var(--bg2);padding:10px 14px;font-family:Arial,sans-serif;display:flex;align-items:flex-start}
+.likely-q .n{font-weight:800;color:var(--accent);min-width:26px;font-size:14px;padding-top:2px}
+.likely-q .qtext{font-family:Georgia,serif;font-size:15.5px;margin:0;font-weight:700;word-wrap:break-word;overflow-wrap:break-word;word-break:break-word}
+.likely-q .body{flex:1;min-width:0}
+.hidden{display:none !important}
+.top-link{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:16px;background:var(--accent);color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+footer{max-width:760px;margin:40px auto 60px;padding:16px;font-family:Arial,sans-serif;font-size:12.5px;color:var(--text2);border-top:1px solid var(--line)}
+mark{background:rgba(200,140,80,.35);border-radius:2px}
+@media(max-width:600px){.hdr-row{flex-wrap:wrap}.brand{width:100%}h1.title{font-size:22px}.likely-q{padding:10px}.likely-q .qtext{font-size:15px}}
+.parts{margin-top:6px}.part{margin:8px 0}.part.sub{margin:6px 0}.subs{margin:4px 0 0 14px;padding-left:10px;border-left:2px solid var(--line)}
+.ph{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-align-items:baseline;align-items:baseline;font-family:Georgia,serif;font-size:15px}.pl{font-family:Arial,sans-serif;font-weight:800;color:var(--accent);min-width:24px}.pt{flex:1 1 200px;min-width:0;word-wrap:break-word;overflow-wrap:break-word;word-break:break-word}
+.abtn,#toggleAll,#tsel{border:1px solid var(--line);background:var(--bg);color:var(--text2);border-radius:6px;padding:6px 10px;font-size:12.5px;cursor:pointer;font-family:Arial,sans-serif}
+#tsel{max-width:100%;font-size:16px}
+.ans{margin:6px 0 2px;padding:8px 12px;border-left:3px solid var(--tag-plain);background:var(--code);border-radius:0 6px 6px 0;font-size:14.5px;word-wrap:break-word;overflow-wrap:break-word;word-break:break-word}
+.likely-q .qtext{font-size:16.5px}
+.hdr-row>*{margin-right:10px}.hdr-row>*:last-child{margin-right:0}nav.topics a{margin-right:6px;-webkit-flex-shrink:0;flex-shrink:0}.filters button,.filters select{margin:0 6px 6px 0}.ph>*{margin:0 8px 4px 0}.likely-q .n{margin-right:10px}
+input,button,select{-webkit-appearance:none;appearance:none;border-radius:6px;-webkit-tap-highlight-color:transparent}
+#search{-webkit-appearance:none;appearance:none}#tsel{padding-right:10px}
+.likely-q,.part,.ph{-webkit-box-sizing:border-box}
+@media(max-width:600px){.brand{margin-bottom:6px;margin-right:0}.hdr-row>*{margin-right:8px}}
+</style>
+</head>
+<body>
+<header>
+<div class="hdr-row"><div class="brand">APEXHUB <span>/ CSC 420 · Questions</span></div>
+<input id="search" type="search" placeholder="Search: DIKW, TPS, SREDIM, O&M..." aria-label="Search questions"><button id="theme-btn" aria-label="Toggle theme">◐</button></div>
+<nav class="topics" id="topic-nav"></nav>
+</header>
+<main>
+<h1 class="title">Likely Exam Questions &amp; Answers</h1>
+<p class="lecturer-credit">CSC 420 — Information Systems &nbsp;·&nbsp; Lecturer: Dr Ogunlana S.O.</p>
+<p class="sub">Exam-style questions with parts (a), (b), (c) and sub-parts (i), (ii), (iii), each with a model answer taken from the lecture notes and study guide. Attempt first, then tap Show answer. These are practice questions, not confirmed past-exam questions.</p>
+<div class="filters" id="filters">
+<button class="active" data-f="all">All</button>
+<button data-f="T">Theory / Explain</button>
+<button data-f="X">Compare / Differentiate</button>
+<button id="toggleAll">Show all answers</button>
+</div>
+<div class="filters"><select id="tsel" aria-label="Filter by topic"><option value="all">All topics</option></select></div>
+<div id="count"></div>
+<div id="root"></div>
+</main>
+<button class="top-link" onclick="window.scrollTo(0,0)" aria-label="Back to top">↑</button>
+<footer>APEXHUB Question Bank · CSC 420 Information Systems · Lecturer: Dr Ogunlana S.O. (Ph.D) · Built from the lecturer's lecture notes. The notes remain the authority.</footer>
+<script>
+(function(){
+var TY={T:['Theory','src'],X:['Compare','plain']};
+var DATA=[
+{id:'t1',t:'Concept of Information Systems',ref:'Study guide, Topic 1',q:[
+['T','Systems',[
+['a','Define a system.','A group of interrelated components working together toward a common goal by accepting inputs and producing outputs in an organised transformation process.'],
+['b','Explain the three basic components of a dynamic system.','Input: capturing and assembling elements to be processed (raw materials, energy, data, human effort). Processing: the transformation that converts input to output (manufacturing, calculations). Output: transferring processed elements to their destination (products, services, information).'],
+['c','Differentiate between a closed and an open system.','Closed: totally independent of and isolated from its environment. Open: significantly interconnected with its environment, exchanging information, material, energy and people.'],
+['d','Differentiate the systems approach from systems analysis.','Systems approach: a set of scientific procedures for solving a problem that considers the inter-relatedness of elements. Systems analysis: a management technique for designing a new system or improving an existing one.']]],
+['T','Feedback and control',[
+['a','What is a cybernetic system?','A system with feedback and control; it monitors and regulates itself.'],
+['b','Define feedback and control with an example.','Feedback is data about system performance (e.g. sales performance data sent to a sales manager). Control uses that feedback to judge whether the system is on track and to adjust inputs or processing if it is not.']]],
+['T','Characteristics of a system',[
+['a','Organisation','Structure and order; the arrangement of components that helps achieve objectives (e.g. an org chart; a computer\'s input device, CPU, output and storage linked together).'],
+['b','Interaction','How each component functions with the others (purchasing with production; CPU with memory).'],
+['c','Interdependence','Components depend on one another, coordinated and linked to achieve an objective.'],
+['d','Integration','How the system is tied together; each part has a unique function, yet together they give a better whole.'],
+['e','Central objective','The real or stated objective that all users must know in advance.']]],
+['X','Types of systems',[
+['a','Differentiate physical from abstract systems.','Physical: tangible, static or dynamic. Abstract: conceptual and non-physical (formulas, models).'],
+['b','Differentiate deterministic from probabilistic systems.','Deterministic: the next state is perfectly predictable (numerically controlled machine tool). Probabilistic: events cannot be perfectly predicted (a warehouse and its contents).'],
+['c','What is a man-made information system?','A set of devices, procedures and operating systems designed around user-based criteria to produce and communicate information for planning, control and performance.']]],
+['T','DIKW hierarchy and data processes',[
+['a','Explain the DIKW hierarchy.','Data is the most basic level; Information adds context; Knowledge adds how to use it; Wisdom adds when to use it.'],
+['b','List five data processes with examples.','Classification (expense as fixed or variable); sorting (employees by surname); aggregating (averages, totals); calculations (gross pay = hours × rate); selection (customers above an income threshold).']]],
+['X','Formal, informal and computer-based systems',[
+['a','Formal information system','Based on the organisation chart: a map of positions and authority relationships, concerned with authority, communication and work flow.'],
+['b','Informal information system','Employee-based; meets personal and vocational needs, helps solve work problems and passes information upward through indirect channels.'],
+['c','Computer-based information system (CBIS)','The third category; depends mainly on the computer for handling business applications.']]],
+['X','Types of computer-based information systems',[
+['a','Differentiate TPS, MIS and DSS.','TPS: most fundamental; captures, classifies, stores and retrieves transaction data (billing, hiring, orders) for routine operational work. MIS: wider scope; supports management activities (planning, scheduling, analysis, decisions) at the tactical level. DSS: helps managers with unstructured or semi-structured, non-recurring decisions; supports but does not replace judgement.'],
+['b','State what these stand for: EIS/ESS, ERP, CRM, SCM, KMS.','Executive (Support) Information System (strategic level, dashboards); Enterprise Resource Planning (integrates core functions on one platform); Customer Relationship Management; Supply Chain Management; Knowledge Management System.'],
+['c','Match system types to organisational levels.','Operational: TPS. Tactical: MIS. Unstructured decisions: DSS. Strategic: EIS/ESS.']]],
+['T','Components and lifecycle',[
+['a','Name and explain the five components of an information system.','Hardware: physical equipment. Software: system and application programs. Data: raw facts captured and stored. People: users, operators, specialists, decision makers. Procedures: rules and methods governing data collection, processing, storage and use. They are interdependent.'],
+['b','Describe the information system lifecycle.','A continuous loop: Input → Processing → Output → Storage → Feedback, which loops back to adjust input and processing.'],
+['c','Give five reasons information systems are vital today.','Enhanced decision-making; coordination and collaboration; control; analysis and visualisation; competitive advantage.']]]]},
+{id:'t2',t:'Informatics',ref:'Study guide, Topic 2',q:[
+['X','Informatics vs Information Systems',[
+['a','Define informatics.','An interdisciplinary field focused on the structure, behaviour and interactions of natural and artificial systems that store, process and communicate information.'],
+['b','Distinguish informatics from information systems.','Informatics is theoretical: the nature of information (representation, information theory) and how it works. Information Systems is applied: design, development, implementation and management of IT systems that support organisational processes and decisions.'],
+['c','How are they related?','Informatics provides the theoretical framework that Information Systems applies to build practical, organisation-specific solutions.']]],
+['T','History of informatics',[
+['','Describe the four historical eras.',null,[['a','Pre-Digital/Mechanical (pre-1940s)','Abacus; Pascal\'s Pascaline (1642); Babbage\'s Analytical Engine (1837); 1890 US Census punch cards.'],['b','Foundation Theory (1940s–50s)','Shannon\'s A Mathematical Theory of Communication (1948) defined the bit; ENIAC (1945).'],['c','Institutional and Mainframe Growth (1960s–80s)','Term informatics coined (Mikhailov, 1966); Codd\'s relational database (1970).'],['d','Network and AI Revolution (1990s–present)','World Wide Web, Big Data, Cloud Computing.']]]]],
+['T','Cloud stack and domains',[
+['a','Explain IaaS, PaaS and SaaS.','IaaS: virtualised hardware layer (servers, networking, firewalls). PaaS: development tools, middleware and database engines. SaaS: end-user applications (CRM, ERP, email).'],
+['b','Name four modern domains of informatics.','Bioinformatics (genomic sequences); Medical/Health informatics (EHR, clinical decision support); Geoinformatics (GIS, planning, climate); Social informatics (effect of system design on behaviour and institutions).']]],
+['T','Pillars and socio-technical triad',[
+['a','State the four interdisciplinary pillars.','Computer science (algorithms, data structures); cognitive science (how humans process information, UI and AI); social science (ethical, equitable information design); engineering (scalability, reliability, physical constraints).'],
+['b','What is the socio-technical triad? Name its three study areas.','The relationship between Information, Technology and People. Studied through Human-Computer Interaction, Information Architecture and Social Informatics.']]]]},
+{id:'t3',t:'Organisation and Methods (O&M)',ref:'Study guide, Topic 3',q:[
+['T','O&M basics',[
+['a','Define O&M.','Continuous checking of office work at every stage and continuous research for improving and simplifying office methods.'],
+['b','State its origin and who may carry it out.','Developed in the Second World War to improve government office administration; later adopted by business. An independent department, or outside management consultants, may do it.'],
+['c','Explain the two core components.','Organisation: structural framework (span of control, delegation and authority, departmentalisation). Methods: mechanics of daily work (process mapping, form design, office automation).'],
+['d','State four objectives of an O&M unit.','Eliminate waste; standardise operations; improve quality; enhance employee morale.']]],
+['T','SREDIM methodology',[
+['','Explain the six SREDIM steps.',null,[['i','Select','Choose the area or process needing improvement (high cost, delays or errors).'],['ii','Record','Collect facts through interviews, observation and flowcharts.'],['iii','Examine','Critically challenge the current method: necessity, who performs it, whether it can be faster or cheaper.'],['iv','Develop','Design a new, improved workflow.'],['v','Install','Implement the solution, with staff training and updated manuals.'],['vi','Maintain','Review periodically so staff do not revert to old habits.']]]]],
+['T','Tools and assignment aspects',[
+['a','Name three key O&M tools.','Work flowcharts; work measurement (time and motion studies); work distribution charts.'],
+['b','Explain the five aspects of an O&M assignment.','1. Determine the purpose (written down first). 2. Plan the assignment (extent depends on department size). 3. Collect relevant data (e.g. questionnaires). 4. Analyse the procedure (purpose, method, forms, time, who). 5. Make proposals (best alternative recommended); success needs staff cooperation, so the team must not seem fault-finding.'],
+['c','How do BPR, Lean and Agile relate to O&M?','They are modern evolutions of O&M\'s core philosophy.']]],
+['T','Advantages and disadvantages',[
+['a','State the advantages of O&M.','Improved methods, organisation and administration; work simplification; better communication and control; fewer faulty steps; new techniques and equipment raising productivity; better staff selection and training; work measurement and job evaluation; greater security against waste and fraud; cost reduction and prestige.'],
+['b','State the disadvantages of O&M.','Costly in itself; small organisations cannot afford a separate department (they can hire consultants); hard to apply properly, and too much simplification is harmful.']]]]}
+];
+var root=document.getElementById('root'),nav=document.getElementById('topic-nav'),cnt=document.getElementById('count'),sel=document.getElementById('tsel'),total=0,qn=0;
+function mk(p,sub){var d=document.createElement('div');d.className='part'+(sub?' sub':'');
+ var h=document.createElement('div');h.className='ph';h.innerHTML='<span class="pl"></span><span class="pt"></span>';
+ h.firstChild.textContent=p[0]?'('+p[0]+')':'';h.lastChild.textContent=p[1];d.appendChild(h);
+ if(p[2]){var b=document.createElement('button');b.className='abtn';b.textContent='Show answer';
+  var a=document.createElement('div');a.className='ans hidden';a.textContent=p[2];
+  b.onclick=function(){var s=a.classList.toggle('hidden');b.textContent=s?'Show answer':'Hide answer'};
+  h.appendChild(b);d.appendChild(a);}
+ if(p[3]){var w=document.createElement('div');w.className='subs';p[3].forEach(function(x){w.appendChild(mk(x,1))});d.appendChild(w);}
+ return d;}
+DATA.forEach(function(d,i){
+ var s=document.createElement('section');s.className='topic';s.id=d.id;
+ s.innerHTML='<h2>'+(i+1)+'. '+d.t+'</h2><p class="ref">'+d.ref+' · '+d.q.length+' questions</p>';
+ d.q.forEach(function(q){total++;qn++;var e=document.createElement('div');e.className='likely-q';e.dataset.t=q[0];
+  e.innerHTML='<div class="n">Q'+qn+'</div><div class="body"><span class="tag '+TY[q[0]][1]+'">'+TY[q[0]][0]+'</span><p class="qtext"></p><div class="parts"></div></div>';
+  e.querySelector('.qtext').textContent=q[1];var pw=e.querySelector('.parts');q[2].forEach(function(p){pw.appendChild(mk(p))});s.appendChild(e);});
+ root.appendChild(s);
+ var a=document.createElement('a');a.href='#'+d.id;a.textContent=d.t.split(' & ')[0].split(',')[0];nav.appendChild(a);
+ var o=document.createElement('option');o.value=d.id;o.textContent=(i+1)+'. '+d.t;sel.appendChild(o);
+});
+var f='all',qs='',tp='all';
+function upd(){var shown=0;
+ document.querySelectorAll('.topic').forEach(function(sec){var any=0;
+  sec.querySelectorAll('.likely-q').forEach(function(e){var ok=(f==='all'||e.dataset.t===f)&&(tp==='all'||sec.id===tp)&&(qs.length<2||(e.textContent+' '+(e.querySelector('.ans')?'':'')+Array.prototype.map.call(e.querySelectorAll('.ans'),function(x){return x.textContent}).join(' ')).toLowerCase().indexOf(qs)>-1);
+   e.classList.toggle('hidden',!ok);if(ok){any++;shown++}});
+  sec.classList.toggle('hidden',!any);});
+ cnt.textContent='Showing '+shown+' of '+total+' questions';}
+document.getElementById('filters').addEventListener('click',function(ev){var b=ev.target.closest('button[data-f]');if(!b)return;
+ f=b.dataset.f;this.querySelectorAll('button[data-f]').forEach(function(x){x.classList.toggle('active',x===b)});upd();});
+sel.addEventListener('change',function(){tp=this.value;upd();});
+var allOn=false;document.getElementById('toggleAll').onclick=function(){allOn=!allOn;this.textContent=allOn?'Hide all answers':'Show all answers';
+ document.querySelectorAll('.ans').forEach(function(a){a.classList.toggle('hidden',!allOn)});document.querySelectorAll('.abtn').forEach(function(b){b.textContent=allOn?'Hide answer':'Show answer'});};
+document.getElementById('search').addEventListener('input',function(){qs=this.value.trim().toLowerCase();upd();});
+upd();
+var root_=document.documentElement,tb=document.getElementById('theme-btn');
+function ap(t){if(t)root_.setAttribute('data-theme',t);else root_.removeAttribute('data-theme')}
+try{ap(localStorage.getItem('apexhub-theme'))}catch(e){}
+tb.addEventListener('click',function(){var c=root_.getAttribute('data-theme');
+ var n=c==='dark'?'light':(c==='light'?null:(matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark'));
+ ap(n);try{localStorage.setItem('apexhub-theme',n||'')}catch(e){}});
+})();
+</script>
+</body>
+</html>
